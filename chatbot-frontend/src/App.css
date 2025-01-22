@@ -1,0 +1,190 @@
+/* Overall container for the chat */
+.chat-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f4f8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  position: relative;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4f6d7a;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #4f6d7a;
+}
+
+/* Clear button - Positioned top-right */
+.clear-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #ff2e00;
+}
+
+/* Chat messages container */
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column; /* Ensure messages are stacked in order */
+}
+
+/* Common message styling */
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+/* User message styling (left aligned) */
+.message.user {
+  background-color: #0084ff;
+  color: white;
+  align-self: flex-start; /* Align user messages to the left */
+}
+
+/* Bot message styling (right aligned) */
+.message.bot {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-end; /* Align bot messages to the right */
+}
+
+/* Positive sentiment message styling */
+.message.bot.positive {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Negative sentiment message styling */
+.message.bot.negative {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Angry sentiment message styling */
+.message.bot.angry {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* Sentiment Emojis */
+.sentiment {
+  margin-left: 10px;
+  font-size: 30px; /* Match the size with the other icons */
+  vertical-align: middle;
+}
+
+/* Positive sentiment emoji */
+.sentiment.positive {
+  color: #28a745; /* Green for positive sentiment */
+}
+
+/* Negative sentiment emoji */
+.sentiment.negative {
+  color: #dc3545; /* Red for negative sentiment */
+}
+
+/* Angry sentiment emoji */
+.sentiment.angry {
+  color: #FF5722; /* Orange for angry sentiment */
+}
+
+/* Typing indicator styling */
+.message.bot.typing {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Input container and button styling */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fff;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-container button {
+  width: 15%;
+  padding: 10px;
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #006bb3;
+}
+
+/* Chatbot icon styling */
+.chatbot-icon {
+  font-size: 30px;
+  color: #0084ff;
+  margin-right: 10px;
+}
+
+.message .fa-robot {
+  font-size: 30px;  /* Consistent size for all bot icons */
+  color: #0084ff;
+  margin-right: 10px; /* Space between the bot icon and text */
+}
+
+.message .fa-user {
+  font-size: 22px;
+  color: #333;
+  margin-right: 10px; /* Space between the user icon and text */
+}
+
